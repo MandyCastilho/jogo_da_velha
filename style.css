@@ -1,62 +1,120 @@
 @charset "UTF-8";
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f0f0f0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-  }
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f9f9f9, #ffecef);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  color: #333;
+  transition: background 0.5s ease;
+}
 
-  h1 {
-    margin-bottom: 10px;
-    color: #750c27;
-  }
+h1 {
+  margin-bottom: 16px;
+  color: #750c27;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px #fcd8af;
+}
 
-  #game {
-    display: grid;
-    grid-template-columns: repeat(3, 100px);
-    grid-template-rows: repeat(3, 100px);
-    gap: 5px;
-    margin-bottom: 15px;
-  }
+#scoreboard {
+  margin: 20px auto;
+  padding: 18px 24px;
+  background: linear-gradient(145deg, #fff0e6, #fde4ef);
+  border-radius: 20px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 320px;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(6px);
+  border: 1px solid #fddde5;
+}
 
-  .cell {
-    background: white;
-    border: 2px solid #750c27;
-    font-size: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    user-select: none;
-    transition: background 0.3s ease;
-  }
+#scoreboard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
 
-  .cell:hover {
-    background: #fec49b;
-  }
+#scoreboard p {
+  margin: 6px 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #750c27;
+  letter-spacing: 0.5px;
+}
 
-  #status {
-    font-size: 1.3rem;
-    margin-bottom: 15px;
-    color: #4e0009;
-  }
+#scoreboard span {
+  color: #9b1745;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 2px 8px;
+  background-color: #ffffffaa;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
 
-  #resetBtn {
-    padding: 10px 20px;
-    background: #9b1745;
-    border: none;
-    color: white;
-    font-weight: bold;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
+#game {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 8px;
+  margin-bottom: 20px;
+}
 
-  #resetBtn:hover {
-    background: #750c27;
-  }
+.cell {
+  background: #fff;
+  border: 2px solid #750c27;
+  border-radius: 8px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #750c27;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.cell:hover {
+  background: #ffe3eb;
+  transform: scale(1.05);
+}
+
+#status {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: #4e0009;
+  font-weight: 600;
+  text-align: center;
+}
+
+#resetBtn {
+  padding: 12px 24px;
+  background: linear-gradient(to right, #9b1745, #750c27);
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#resetBtn:hover {
+  background: linear-gradient(to left, #9b1745, #750c27);
+  transform: scale(1.05);
+}
+
+.highlight {
+  background-color: #c0f4c0;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
