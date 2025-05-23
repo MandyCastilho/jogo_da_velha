@@ -16,16 +16,17 @@ const winConditions = [
   [0,4,8], [2,4,6]
 ];
 
-// Som opcional
-const soundMove = new Audio('move.mp3');
-const soundWin = new Audio('win.mp3');
+// 🎵 Sons do jogo
+const soundMove = new Audio('audio/move.mp3');
+const soundWin = new Audio('audio/win.mp3');
+const soundDraw = new Audio('audio/draw.mp3');
 
 function handleCellClick() {
   const index = this.getAttribute('data-index');
-  if(board[index] !== '' || !running) return;
+  if (board[index] !== '' || !running) return;
 
   updateCell(this, index);
-  soundMove.play(); // Som ao clicar
+  soundMove.play(); // Som ao jogar
   checkWinner();
 }
 
@@ -42,17 +43,17 @@ function changePlayer() {
 function checkWinner() {
   let roundWon = false;
 
-  for(let condition of winConditions) {
+  for (let condition of winConditions) {
     const [a, b, c] = condition;
-    if(board[a] === '' || board[b] === '' || board[c] === '') continue;
-    if(board[a] === board[b] && board[b] === board[c]) {
+    if (board[a] === '' || board[b] === '' || board[c] === '') continue;
+    if (board[a] === board[b] && board[b] === board[c]) {
       highlightWinningCells(a, b, c);
       roundWon = true;
       break;
     }
   }
 
-  if(roundWon) {
+  if (roundWon) {
     status.textContent = `Jogador ${currentPlayer} venceu! 🎉`;
     soundWin.play();
     scores[currentPlayer]++;
@@ -61,8 +62,9 @@ function checkWinner() {
     return;
   }
 
-  if(!board.includes('')) {
+  if (!board.includes('')) {
     status.textContent = "Empate! Ninguém venceu.";
+    soundDraw.play(); // 💥 Som de empate adicionado aqui
     running = false;
     return;
   }
@@ -84,13 +86,17 @@ function updateScore() {
 function resetGame() {
   board.fill('');
   running = true;
-  currentPlayer = startPlayer = (startPlayer === 'X' ? 'O' : 'X'); // Alternar jogador inicial
+  // Alterna o jogador inicial a cada rodada
+  startPlayer = (startPlayer === 'X' ? 'O' : 'X');
+  currentPlayer = startPlayer;
   status.textContent = `Vez do jogador: ${currentPlayer}`;
   cells.forEach(cell => {
     cell.textContent = '';
     cell.classList.remove('highlight');
   });
 }
-  
+
+// 🎯 Eventos
 cells.forEach(cell => cell.addEventListener('click', handleCellClick));
 resetBtn.addEventListener('click', resetGame);
+
