@@ -2,59 +2,59 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #f9f9f9, #ffecef);
+  background: linear-gradient(135deg, #261f4f, #0a0825);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
   margin: 0;
-  color: #333;
+  color: #e0e0f0;
   transition: background 0.5s ease;
 }
 
 h1 {
   margin-bottom: 16px;
-  color: #750c27;
+  color: #fec49b;
   font-size: 2.5rem;
   letter-spacing: 1px;
-  text-shadow: 1px 1px 2px #fcd8af;
+  text-shadow: 1px 1px 2px #000017;
 }
 
 #scoreboard {
   margin: 20px auto;
   padding: 18px 24px;
-  background: linear-gradient(145deg, #fff0e6, #fde4ef);
+  background: linear-gradient(145deg, #1d1741, #131033);
   border-radius: 20px;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
   text-align: center;
   max-width: 320px;
   transition: all 0.4s ease;
   backdrop-filter: blur(6px);
-  border: 1px solid #fddde5;
+  border: 1px solid #2e255f;
 }
 
 #scoreboard:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
 }
 
 #scoreboard p {
   margin: 6px 0;
   font-size: 1.1rem;
   font-weight: 500;
-  color: #750c27;
+  color: #fcd8af;
   letter-spacing: 0.5px;
 }
 
 #scoreboard span {
-  color: #9b1745;
+  color: #fec49b;
   font-weight: bold;
   font-size: 1.2rem;
   padding: 2px 8px;
-  background-color: #ffffffaa;
+  background-color: #ffffff22;
   border-radius: 12px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
 }
 
 #game {
@@ -66,55 +66,56 @@ h1 {
 }
 
 .cell {
-  background: #fff;
-  border: 2px solid #750c27;
+  background: #1d1741;
+  border: 2px solid #261f4f;
   border-radius: 8px;
   font-size: 2.5rem;
   font-weight: bold;
-  color: #750c27;
+  color: #fec49b;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   user-select: none;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
   transition: background 0.3s ease, transform 0.2s;
 }
 
 .cell:hover {
-  background: #ffe3eb;
+  background: #2e255f;
   transform: scale(1.05);
 }
 
 #status {
   font-size: 1.3rem;
   margin-bottom: 20px;
-  color: #4e0009;
+  color: #fcd8af;
   font-weight: 600;
   text-align: center;
 }
 
 #resetBtn {
   padding: 12px 24px;
-  background: linear-gradient(to right, #9b1745, #750c27);
+  background: linear-gradient(to right, #261f4f, #131033);
   border: none;
-  color: white;
+  color: #fcd8af;
   font-weight: 600;
   border-radius: 8px;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 #resetBtn:hover {
-  background: linear-gradient(to left, #9b1745, #750c27);
+  background: linear-gradient(to left, #261f4f, #131033);
   transform: scale(1.05);
 }
 
 .highlight {
-  background-color: #c0f4c0;
+  background-color: #43586e;
   font-weight: bold;
   border-radius: 6px;
   transition: background 0.3s ease;
 }
+
 
