@@ -103,8 +103,7 @@ O jogo roda diretamente no navegador, **sem necessidade de instalação**.
 - Delay proposital para simular comportamento humano
 - Ideal para treinar lógica e interação com eventos
 - Estrutura pronta para evolução para uma IA mais inteligente  
-  *(ex: algoritmo Minimax)*
-
+  
 ---
 
 ## 🎨 Design e UX
@@ -133,7 +132,7 @@ O jogo roda diretamente no navegador, **sem necessidade de instalação**.
 ## 🧑‍💻 Autora
 
 **Amanda Ramos Castilho**  
-🎓 Estudante de Análise e Desenvolvimento de Sistemas  
+🎓 Formada em Análise e Desenvolvimento de Sistemas  
 
 📌 Projeto desenvolvido com foco em:
 - JavaScript puro  
