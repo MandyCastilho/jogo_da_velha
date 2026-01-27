@@ -14,8 +14,6 @@ O jogo roda diretamente no navegador, **sem necessidade de instalação**.
 🟩 Destaque visual para jogadas vencedoras  
 🔊 Sons para jogadas, vitória e empate  
 
-> 📌 *Adicione imagens ou GIFs do jogo aqui para deixar o repositório ainda mais atrativo.*
-
 ---
 
 ## 🚀 Funcionalidades
